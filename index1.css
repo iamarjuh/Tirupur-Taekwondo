@@ -475,6 +475,7 @@ header nav ul li a:hover {
 
     /* Hero Section */
     .hero {  /* Make the hero section take less space on mobile */
+        height:90vh;
         display: flex;
         justify-content: center;
         align-items: center;
