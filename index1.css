@@ -1,0 +1,568 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;  /* Background color */
+    scroll-behavior: smooth;
+}
+
+/* Header Section */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 50px;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+/* Logo */
+header .logo {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Navigation Bar */
+header nav {
+    margin-right: 60px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end; /* Align navigation items to the right */
+    align-items: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#logoname{
+    font-family: 'Roboto',sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 38px;
+    margin-left: 15px;
+    font-weight: 700;
+}
+header nav ul li a:hover {
+    color: #ff4c4c;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    background: transparent;
+    border: none;
+}
+
+.hamburger div {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.carousel-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Initially set opacity to 0 */
+    transition: opacity 1s ease-in-out; /* Transition opacity */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the full container */
+}
+
+
+/* Tinted Glass Effect for Carousel Text */
+.carousel-text {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
+    padding: 15px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* Apply blur for glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+}
+.carousel-text h1 {
+    font-size: 50px;
+    margin: 0;
+}
+
+.carousel-text p {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+/* Navigation Dots */
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #ff4c4c;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* About Section */
+#about {
+    height: 100vh;
+    background: white;
+    padding: 80px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+#about h2 {
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+#about p {
+    font-size: 18px;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#about .team {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#about .team .instructor {
+    text-align: center;
+    width: 200px;
+}
+
+#about .team img {
+    width: 100%;
+    border-radius: 10%;
+    margin-bottom: 20px;
+}
+
+#classes {
+    height: 100vh;
+    background-color: #ff4c4c;
+    padding: 80px 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+#classes h2 {
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+#classes .class-card {
+    display: block;
+    background: white;
+    color: black;
+    width: 80%;  /* Adjust to make the class cards more centered */
+    padding: 20px;
+    margin: 15px auto; /* Center the cards and give some space between them */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+#classes .class-card:hover {
+    transform: scale(1.05);
+}
+
+#classes .class-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+#classes .class-card p {
+    font-size: 16px;
+}
+/* Gallery Section */
+#gallery {
+    height: 100vh;
+    padding: 80px 50px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+#gallery h2 {
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+#gallery .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
+    gap: 20px;
+}
+
+#gallery .gallery-item {
+    width: 100%;
+    height: 230px;
+    background-color: #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+#gallery .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    display: none; /* Initially hide captions */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.gallery-item:hover .gallery-caption {
+    display: block; /* Show caption on hover */
+}
+
+@media (max-width: 768px) {
+    #gallery{
+        margin-top: 100px;
+    }
+    #gallery .gallery-container {
+        
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        gap: 10px;
+        padding-bottom: 20px; /* Prevent scrollbar from cutting off */
+    }
+
+    #gallery .gallery-item {
+        flex-shrink: 0; /* Prevent items from shrinking */
+        width: 250px; /* Set width to fit mobile screens */
+    }
+
+    #gallery h2 {
+        font-size: 32px;
+    }
+    .carousel-text {
+        position: absolute;
+        bottom: 30px;
+        right: 20px;
+        color: white;
+        background: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
+        padding: 15px;
+        border-radius: 10px;
+        backdrop-filter: blur(10px); /* Apply blur for glass effect */
+        -webkit-backdrop-filter: blur(10px); /* For Safari */
+    }
+    .carousel-text h1 , p{
+        font-size: 18px;  /* Reduce the font size for mobile view */
+    }
+
+    .carousel-text {
+        bottom: 20px;  /* Move text higher on mobile */
+        left: unset;  /* Remove left alignment */
+        right: 20px;  /* Position text on the bottom-right corner */
+    }
+}
+
+@media (max-width: 480px) {
+    #gallery{
+        margin-top: 100px;
+    }
+    #gallery .gallery-item {
+        width: 220px; /* Adjust the width further for smaller screens */
+    }
+
+    #gallery h2 {
+        font-size: 28px;
+    }
+    .carousel-text {
+        position: absolute;
+        bottom: 30px;
+        right: 20px;
+        color: white;
+        background: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
+        padding: 15px;
+        border-radius: 10px;
+        backdrop-filter: blur(10px); /* Apply blur for glass effect */
+        -webkit-backdrop-filter: blur(10px); /* For Safari */
+    }
+    .carousel-text h1 , p{
+        font-size: 18px;  /* Reduce the font size for mobile view */
+    }
+
+    
+    .carousel-text {
+        bottom: 20px;  /* Move text higher on mobile */
+        left: unset;  /* Remove left alignment */
+        right: 20px;  /* Position text on the bottom-right corner */
+    }
+}
+
+/* Contact Section */
+#contact {
+    height: 100vh;
+    background: white;
+    padding: 80px 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contact h2 {
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+    font-size: 16px;
+}
+
+#contact form button {
+    background-color: #ff4c4c;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact form button:hover {
+    background-color: #d43e3e;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1024px) {
+    header nav ul {
+        justify-content: flex-end;
+    }
+
+    header nav ul li {
+        margin: 0 15px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero p {
+        font-size: 20px;
+    }
+
+    #about h2 {
+        font-size: 40px;
+    }
+
+    #about .team {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about .team .instructor {
+        margin-bottom: 30px;
+    }
+
+    #classes .class-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #testimonials .testimonial {
+        max-width: 100%;
+    }
+
+    #contact form input,
+    #contact form textarea {
+        font-size: 14px;
+    }
+
+    #contact form button {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        transition: all 0.3s ease;
+    }
+
+    header nav.active {
+        display: flex;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    header nav ul li {
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        width: 30px;
+        height: 25px;
+        justify-content: space-between;
+        z-index: 1001;
+        margin-left: auto;
+    }
+
+    .hamburger div {
+        width: 100%;
+        height: 4px;
+        background-color: white;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger.open div:nth-child(1) {
+        transform: rotate(45deg);
+        transform-origin: top left;
+    }
+
+    .hamburger.open div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.open div:nth-child(3) {
+        transform: rotate(-45deg);
+        transform-origin: bottom left;
+    }
+}

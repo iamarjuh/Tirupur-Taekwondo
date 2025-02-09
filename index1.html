@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taekwondo Academy</title>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index1.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <img src="logo-removebg-preview.png" alt="Logo" class="logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+        <div id="logoname">Tirupur Taekwondo</div>
+        <button class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#classes">Classes</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<!-- Hero Section with Full-Screen Image Carousel and Dots -->
+<section class="hero">
+    <div class="image-carousel">
+        <div class="carousel-item">
+            <img src="1.jpg" alt="Taekwondo Image 1">
+            <div class="carousel-text">
+                <h1>Welcome to Tirupur Taekwondo Academy</h1>
+                <p>Master the art of self-defense and discipline</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="2.jpg" alt="Taekwondo Image 2">
+            <div class="carousel-text">
+                <h1>Transform Your Life</h1>
+                <p>Learn focus, respect, and perseverance</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="3.jpg" alt="Taekwondo Image 3">
+            <div class="carousel-text">
+                <h1>Join Us Today</h1>
+                <p>Take your first step towards greatness</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Dots -->
+    <div class="carousel-dots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+    </div>
+</section>
+
+
+
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>At Tirupur Taekwondo Academy, we believe in the power of discipline, focus, and strength. Our expert instructors are
+            here to guide you on your journey to mastering Taekwondo.</p>
+
+        <div class="team" data-aos="fade-up">
+            <div class="instructor">
+                <img src="instrucor.jpg" alt="Instructor 1">
+                <h4>Abraham Lincoln A.J</h4>
+                <p>5th Dan Black Belt,<br> Chief Instructor</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Classes Section -->
+    <section id="classes">
+        <h2>Our Classes</h2>
+        <div class="class-card" data-aos="fade-up">
+            <h3>Beginner Class</h3>
+            <p>Learn the basics of Taekwondo and build your foundation.</p>
+        </div>
+        <div class="class-card" data-aos="fade-up">
+            <h3>Advanced Class</h3>
+            <p>Sharpen your techniques and work towards higher belts.</p>
+        </div>
+        <div class="class-card" data-aos="fade-up">
+            <h3>Kids Class</h3>
+            <p>Fun and engaging lessons for kids to learn discipline and self-defense.</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+<section id="gallery">
+    <h2>Our Gallery</h2>
+    <p>Explore our amazing moments captured at the academy</p>
+    <div class="gallery-container">
+        <div class="gallery-item">
+            <img src="3.jpg" alt="Gallery Image 3">
+            <div class="gallery-caption">Team Work</div>
+        </div>
+        <div class="gallery-item">
+            <img src="g1.jpg" alt="Gallery Image 4">
+            <div class="gallery-caption">Victory Celebration</div>
+        </div>
+        <div class="gallery-item">
+            <img src="g2.jpg" alt="Gallery Image 5">
+            <div class="gallery-caption">Training Session</div>
+        </div>
+        <div class="gallery-item">
+            <img src="g3.jpg" alt="Gallery Image 6">
+            <div class="gallery-caption">Focus and Discipline</div>
+        </div>
+        <div class="gallery-item">
+            <img src="g4.jpg" alt="Gallery Image 6">
+            <div class="gallery-caption">Focus and Discipline</div>
+        </div>
+        <div class="gallery-item">
+            <img src="g5.jpg" alt="Gallery Image 6">
+            <div class="gallery-caption">Focus and Discipline</div>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        // Toggle Menu Script
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            const hamburger = document.querySelector('.hamburger');
+            nav.classList.toggle('active');
+            hamburger.classList.toggle('open');
+        }
+    </script>
+    <script src="index1.js"></script>
+</body>
+
+</html>
