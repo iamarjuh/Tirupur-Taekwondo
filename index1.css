@@ -326,83 +326,6 @@ header nav ul li a:hover {
     display: block; /* Show caption on hover */
 }
 
-@media (max-width: 768px) {
-    #gallery{
-        margin-top: 100px;
-    }
-    #gallery .gallery-container {
-        
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto; /* Enable horizontal scrolling */
-        gap: 10px;
-        padding-bottom: 20px; /* Prevent scrollbar from cutting off */
-    }
-
-    #gallery .gallery-item {
-        flex-shrink: 0; /* Prevent items from shrinking */
-        width: 250px; /* Set width to fit mobile screens */
-    }
-
-    #gallery h2 {
-        font-size: 32px;
-    }
-    .carousel-text {
-        position: absolute;
-        bottom: 30px;
-        right: 20px;
-        color: white;
-        background: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
-        padding: 15px;
-        border-radius: 10px;
-        backdrop-filter: blur(10px); /* Apply blur for glass effect */
-        -webkit-backdrop-filter: blur(10px); /* For Safari */
-    }
-    .carousel-text h1 , p{
-        font-size: 18px;  /* Reduce the font size for mobile view */
-    }
-
-    .carousel-text {
-        bottom: 20px;  /* Move text higher on mobile */
-        left: unset;  /* Remove left alignment */
-        right: 20px;  /* Position text on the bottom-right corner */
-    }
-}
-
-@media (max-width: 480px) {
-    #gallery{
-        margin-top: 100px;
-    }
-    #gallery .gallery-item {
-        width: 220px; /* Adjust the width further for smaller screens */
-    }
-
-    #gallery h2 {
-        font-size: 28px;
-    }
-    .carousel-text {
-        position: absolute;
-        bottom: 30px;
-        right: 20px;
-        color: white;
-        background: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
-        padding: 15px;
-        border-radius: 10px;
-        backdrop-filter: blur(10px); /* Apply blur for glass effect */
-        -webkit-backdrop-filter: blur(10px); /* For Safari */
-    }
-    .carousel-text h1 , p{
-        font-size: 18px;  /* Reduce the font size for mobile view */
-    }
-
-    
-    .carousel-text {
-        bottom: 20px;  /* Move text higher on mobile */
-        left: unset;  /* Remove left alignment */
-        right: 20px;  /* Position text on the bottom-right corner */
-    }
-}
-
 /* Contact Section */
 #contact {
     height: 100vh;
@@ -457,112 +380,222 @@ header nav ul li a:hover {
     }
 }
 
-@media (max-width: 1024px) {
+
+
+
+@media (max-width: 480px) {
+    #gallery{
+        margin-top: 100px;
+    }
+    #gallery .gallery-item {
+        width: 220px; /* Adjust the width further for smaller screens */
+    }
+
+    #gallery h2 {
+        font-size: 28px;
+    }
+}
+/* Global Mobile Styles */
+@media only screen and (max-width: 768px) {
+    
+    #gallery{
+        margin-top: 100px;
+    }
+    #gallery .gallery-container {
+        
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        gap: 10px;
+        padding-bottom: 20px; /* Prevent scrollbar from cutting off */
+    }
+
+    #gallery .gallery-item {
+        flex-shrink: 0; /* Prevent items from shrinking */
+        width: 250px; /* Set width to fit mobile screens */
+    }
+
+    #gallery h2 {
+        font-size: 32px;
+    }
+    /* Make sure the font sizes and paddings are adjusted for mobile */
+    body {
+        font-size: 14px; /* Slightly smaller font size for mobile */
+    }
+
+    /* Header Section */
+    header {
+        padding: 10px 20px;  /* Adjust header padding */
+        height: 50px;  /* Reduced header height for mobile */
+    }
+
+    /* Logo */
+    header .logo {
+        width: 40px; /* Make logo smaller */
+    }
+
+    #logoname {
+        font-size: 24px; /* Adjust font size of the logo name */
+    }
+
+    /* Navigation for Mobile */
+    header nav {
+        margin-right: 0;
+        flex-grow: 0;
+    }
+
     header nav ul {
-        justify-content: flex-end;
+        display: none; /* Hide default navigation */
+        flex-direction: column; /* Make nav items stack vertically */
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
     }
 
     header nav ul li {
-        margin: 0 15px;
+        margin: 20px 0;
+        text-align: center;
     }
 
-    .hero h1 {
-        font-size: 50px;
+    header nav ul li a {
+        font-size: 18px;
+        color: white;
     }
 
-    .hero p {
-        font-size: 20px;
+    header nav.active ul {
+        display: flex; /* Show menu when active */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger on mobile */
+    }
+
+    /* Hero Section */
+    .hero {
+        height: 70vh;  /* Make the hero section take less space on mobile */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .image-carousel {
+        width: 100%;
+        height: 100%;
+    }
+
+    .carousel-item img {
+        object-fit: cover;
+    }
+
+    /* Adjust Carousel Text */
+    .carousel-text {
+        position: absolute;
+        bottom: 20px;
+        left: 10px;
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .carousel-text h1 {
+        font-size: 30px; /* Make the title smaller */
+    }
+
+    .carousel-text p {
+        font-size: 16px; /* Adjust the text size */
+    }
+
+    /* Adjust Dot Navigation */
+    .carousel-dots {
+        bottom: 10px;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+    }
+
+    /* About Section */
+    #about {
+        padding: 50px 20px;
+        text-align: center;
     }
 
     #about h2 {
-        font-size: 40px;
+        font-size: 32px;
+        margin-bottom: 20px;
     }
 
-    #about .team {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #about .team .instructor {
+    #about p {
+        font-size: 14px;
         margin-bottom: 30px;
     }
 
-    #classes .class-card {
-        width: 100%;
-        margin: 10px 0;
+    /* Classes Section */
+    #classes {
+        padding: 50px 20px;
     }
 
-    #testimonials .testimonial {
-        max-width: 100%;
+    #classes h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    #classes .class-card {
+        width: 90%; /* Make the cards more responsive */
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    #classes .class-card h3 {
+        font-size: 20px;
+    }
+
+    /* Gallery Section */
+    #gallery {
+        padding: 50px 20px;
+    }
+
+    #gallery h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    #gallery .gallery-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+    }
+
+    .gallery-item {
+        height: 200px; /* Make the gallery images smaller */
+    }
+
+    .gallery-caption {
+        font-size: 14px; /* Adjust caption font size */
+    }
+
+    /* Contact Section */
+    #contact {
+        padding: 50px 20px;
+    }
+
+    #contact h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
     }
 
     #contact form input,
     #contact form textarea {
         font-size: 14px;
+        padding: 12px;
+        margin: 8px 0;
     }
 
     #contact form button {
+        padding: 12px 25px;
         font-size: 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    header nav {
-        display: none;
-        position: fixed;
-        top: 0;
-        right: 0;
-        background-color: rgba(0, 0, 0, 0.8);
-        width: 100%;
-        height: 100%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        z-index: 999;
-        transition: all 0.3s ease;
-    }
-
-    header nav.active {
-        display: flex;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        padding: 0;
-    }
-
-    header nav ul li {
-        margin: 15px 0;
-    }
-
-    .hamburger {
-        display: flex;
-        flex-direction: column;
-        width: 30px;
-        height: 25px;
-        justify-content: space-between;
-        z-index: 1001;
-        margin-left: auto;
-    }
-
-    .hamburger div {
-        width: 100%;
-        height: 4px;
-        background-color: white;
-        transition: all 0.3s ease;
-    }
-
-    .hamburger.open div:nth-child(1) {
-        transform: rotate(45deg);
-        transform-origin: top left;
-    }
-
-    .hamburger.open div:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.open div:nth-child(3) {
-        transform: rotate(-45deg);
-        transform-origin: bottom left;
     }
 }
